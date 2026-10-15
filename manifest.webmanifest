@@ -1,0 +1,21 @@
+{
+  "id": "./",
+  "name": "مدرسة السياقة — Auto-école Maroc",
+  "short_name": "Siya9a",
+  "description": "تعلم السياقة بالفيتيسات فالمغرب: دروس يومية، امتحانات، ومختبر الميكانيك — بلا انترنت.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./#/home",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b1d3a",
+  "theme_color": "#0f3d91",
+  "categories": ["education"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

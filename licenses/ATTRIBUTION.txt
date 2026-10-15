@@ -1,0 +1,25 @@
+# Attribution & licences
+
+## OpenStreetMap (Rabat — Agdal district)
+* Map data **© OpenStreetMap contributors**, available under the **Open Database License (ODbL) 1.0** — https://www.openstreetmap.org/copyright · https://opendatacommons.org/licenses/odbl/1-0/
+* Where it appears in the app: in the 3D view of the Rabat world (HUD line "© OpenStreetMap contributors · ODbL"), on the **المصادر / About** screen, and inside `src/data/rabat-agdal.json` (`meta.attribution`, `meta.license`).
+* How the data is used: downloaded **once at build time** with `npm run osm:fetch` (Overpass API, small bbox, identified User-Agent), converted by `npm run osm:convert` into a compact local file. The app never calls OSM, Overpass or any map API at runtime.
+* `src/data/rabat-agdal.json` is a **derived database** of OSM data. If the app is distributed publicly, that file is distributed under **ODbL 1.0** with the attribution above (share-alike for the database). The 3D scenes drawn from it are "produced works" and carry the attribution notice.
+* Traffic lights and zebra markings in that world are drawn where OSM has `highway=traffic_signals` / `highway=crossing` nodes; their phases and exact positions are simulated for teaching, not surveyed.
+
+## Software
+* **three.js** r186 — MIT licence, © 2010-2026 three.js authors (`licenses/three.js-LICENSE.txt` in the build).
+* **esbuild** (build tool only, not shipped) — MIT.
+* Fonts: system fonts only (no font files shipped or downloaded).
+* Sounds: synthesised at runtime with the Web Audio API. Icons, textures, signs, diagrams and 3D models: generated in code for this project.
+
+## Legal texts (Morocco)
+* Loi n° 52-05 portant code de la route (Dahir n° 1-10-07 du 11 février 2010) and loi n° 116.14 — PDFs published by NARSA: https://www.narsa.ma/fr/code-de-la-route
+* Décret n° 2-10-420 du 29 septembre 2010 (règles de la circulation routière), BO n° 5878 bis — read from the full reproduction at maroctl.com; official BO PDF not retrieved (status `verified-secondary` in `src/content/legal-sources.json`).
+* Article summaries in the app are paraphrases written for learning; the official text prevails.
+
+## Road signs
+Signs are simplified illustrations drawn in code in the Vienna-convention style used in Morocco. They are not official artwork.
+
+## Disclaimer
+This is an educational simulator. It is not a certified driving school, does not issue licences and does not reproduce the official NARSA theory or practical examination.

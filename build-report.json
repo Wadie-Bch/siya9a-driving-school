@@ -1,0 +1,119 @@
+{
+ "version": "f7a5b72f0d39",
+ "builtAt": "2026-10-15T19:14:22.596Z",
+ "total": {
+  "bytes": 1634569,
+  "gzip": 440619,
+  "brotli": 365305
+ },
+ "files": [
+  {
+   "file": "js/main.js",
+   "bytes": 1172694,
+   "gzip": 312589,
+   "brotli": 254035
+  },
+  {
+   "file": "data/rabat-agdal.json",
+   "bytes": 237951,
+   "gzip": 45558,
+   "brotli": 36603
+  },
+  {
+   "file": "content/questions.json",
+   "bytes": 64931,
+   "gzip": 15643,
+   "brotli": 13446
+  },
+  {
+   "file": "content/curriculum.json",
+   "bytes": 32077,
+   "gzip": 7843,
+   "brotli": 6779
+  },
+  {
+   "file": "content/lab-modules.json",
+   "bytes": 23248,
+   "gzip": 6649,
+   "brotli": 5784
+  },
+  {
+   "file": "styles/app.css",
+   "bytes": 21878,
+   "gzip": 5467,
+   "brotli": 4881
+  },
+  {
+   "file": "content/mistakes.json",
+   "bytes": 21370,
+   "gzip": 5333,
+   "brotli": 4563
+  },
+  {
+   "file": "content/legal-sources.json",
+   "bytes": 15904,
+   "gzip": 5246,
+   "brotli": 4523
+  },
+  {
+   "file": "icons/icon-512.png",
+   "bytes": 12319,
+   "gzip": 11817,
+   "brotli": 11706
+  },
+  {
+   "file": "icons/icon-maskable-512.png",
+   "bytes": 9506,
+   "gzip": 8876,
+   "brotli": 8808
+  },
+  {
+   "file": "icons/icon-192.png",
+   "bytes": 4948,
+   "gzip": 4971,
+   "brotli": 4930
+  },
+  {
+   "file": "icons/apple-touch-icon.png",
+   "bytes": 4347,
+   "gzip": 4342,
+   "brotli": 4303
+  },
+  {
+   "file": "content/practical-exams.json",
+   "bytes": 3827,
+   "gzip": 1514,
+   "brotli": 1264
+  },
+  {
+   "file": "sw.js",
+   "bytes": 3647,
+   "gzip": 1529,
+   "brotli": 1237
+  },
+  {
+   "file": "licenses/ATTRIBUTION.txt",
+   "bytes": 2513,
+   "gzip": 1396,
+   "brotli": 1107
+  },
+  {
+   "file": "index.html",
+   "bytes": 1421,
+   "gzip": 716,
+   "brotli": 481
+  },
+  {
+   "file": "licenses/three.js-LICENSE.txt",
+   "bytes": 1081,
+   "gzip": 667,
+   "brotli": 481
+  },
+  {
+   "file": "manifest.webmanifest",
+   "bytes": 907,
+   "gzip": 463,
+   "brotli": 374
+  }
+ ]
+}

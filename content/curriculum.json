@@ -1,0 +1,390 @@
+{
+  "_doc": "30 daily lessons. Each: objective → explanation (text/visual/legal/tip) → demonstration → guided practice → solo attempt (graded) → feedback → quiz → pass/fail → summary → saved record. Visual kinds are rendered by ui/visuals.js; demos by learn/demos.js or animated diagrams.",
+  "sections": {
+    "foundation": "الأساسيات", "control": "التحكم فالطوموبيل", "urban": "السياقة فالمدينة", "manoeuvres": "المناورات", "independent": "السياقة بوحدك"
+  },
+  "passRule": { "quiz": 0.7, "practical": 70, "noCritical": true },
+  "lessons": [
+    { "id": "d01", "day": 1, "section": "foundation", "minutes": 10, "skills": ["observation"],
+      "title": { "ar": "التعرف على الطوموبيل والأزرار", "fr": "Découverte du poste de conduite" },
+      "objective": { "ar": "تعرف فين كاين كل زر فالطوموبيل وشنو كيدير: الفولان، الپيدالات، الفيتيس، frein à main، المرايات، clignotants." },
+      "explain": [
+        { "type": "text", "ar": "قبل ما تتحرك، خاصك تعرف «المكتب» ديالك. الطوموبيل اللي غادي نتعلمو بيها فيها بواط يدوية (boîte manuelle) بـ 5 ديال الفيتيسات + marche arrière." },
+        { "type": "visual", "kind": "cockpit" },
+        { "type": "visual", "kind": "pedals" },
+        { "type": "tip", "ar": "فالمغرب كنسوقو على اليمين، والسائق كيگلس على اليسار." },
+        { "type": "text", "ar": "فالتطبيق: قيس على المراية باش «تشوف فيها» (كتتسجل كمراقبة)، و👀 باش تدور راسك (angle mort)." }
+      ],
+      "demo": { "type": "drive", "script": "cockpit-tour" },
+      "practice": { "scenario": "cockpit-tour" },
+      "quiz": ["i04", "i03", "t01"] },
+
+    { "id": "d02", "day": 2, "section": "foundation", "minutes": 10, "skills": ["steering", "observation"],
+      "title": { "ar": "الستيرينغ، الگلسة والمرايات", "fr": "Volant, position de conduite et rétroviseurs" },
+      "objective": { "ar": "تعرف كيفاش تگلس، تشد الفولان، تنظم المرايات، وتفهم angle mort." },
+      "explain": [
+        { "type": "text", "ar": "الگلسة: الضهر لاصق مع الكرسي، رجلك اليسرية تقدر تدوس l'embrayage حتى للتحت والركبة مطوية شوية، يديك على الفولان فـ «9 و15» (ولا 10 و10)." },
+        { "type": "visual", "kind": "mirrors" },
+        { "type": "text", "ar": "المرايات ما كيوريوكش كلشي: كاين angle mort على الجناب. لهادشي قبل أي تبديل ديال الاتجاه كتدور راسك شوية." },
+        { "type": "tip", "ar": "دور الفولان بيديك بجوج، وما تحيدش يديك بجوج من الفولان والطوموبيل كتمشي." }
+      ],
+      "demo": { "type": "drive", "script": "steering" },
+      "practice": { "scenario": "steer-basics" },
+      "quiz": ["i03", "i02", "h01"] },
+
+    { "id": "d03", "day": 3, "section": "foundation", "minutes": 12, "skills": ["transmission"],
+      "title": { "ar": "الپيدالات، الكونطاكت و point mort", "fr": "Pédales, contact et point mort" },
+      "objective": { "ar": "تعرف الخدمة ديال كل پيدال، وتحضر الطوموبيل بأمان قبل ما تشعل: frein à main + point mort + l'embrayage." },
+      "explain": [
+        { "type": "visual", "kind": "pedals" },
+        { "type": "text", "ar": "من اليسار: l'embrayage (الرجل اليسرية) — الفران (الرجل اليمنية) — البنزين (الرجل اليمنية). الرجل اليمنية كتمشي بين الفران والبنزين، ما تدوسهمش بجوج." },
+        { "type": "visual", "kind": "hpattern" },
+        { "type": "text", "ar": "Point mort (N) كيعني حتى فيتيس ما داخلة: الموطور يقدر يدور والروايض ما كيتحركوش بيه." },
+        { "type": "visual", "kind": "dashboard" },
+        { "type": "tip", "ar": "عادي ملي تدير الكونطاكت يشعلو أضواء الباطري والزيت شوية. خاصهم يطفاو ملي يشعل الموطور." }
+      ],
+      "demo": { "type": "drive", "script": "start-engine" },
+      "practice": { "scenario": "pedals-prep" },
+      "quiz": ["t01", "db03", "t10"] },
+
+    { "id": "d04", "day": 4, "section": "foundation", "minutes": 12, "skills": ["transmission"],
+      "title": { "ar": "شعل الموطور ودخل الفيتيس الأولى", "fr": "Démarrer le moteur et engager la première" },
+      "objective": { "ar": "تشعل الموطور بأمان وتدخل الفيتيسات بلا ما يحك البواط." },
+      "explain": [
+        { "type": "text", "ar": "قاعدة ذهبية: باش تبدل الفيتيس، دوس l'embrayage حتى للتحت (100%). إلا ما دستيش مزيان، البواط كيحك (craquement) والفيتيس ما كتدخلش." },
+        { "type": "visual", "kind": "hpattern" },
+        { "type": "text", "ar": "la marche arrière (R) ما تدخلهاش حتى تكون الطوموبيل واقفة تماما." },
+        { "type": "visual", "kind": "torqueFlow" }
+      ],
+      "demo": { "type": "lab", "module": "gearbox" },
+      "practice": { "scenario": "first-gear" },
+      "quiz": ["g04", "t08", "c04"] },
+
+    { "id": "d05", "day": 5, "section": "foundation", "minutes": 15, "skills": ["transmission"],
+      "title": { "ar": "Point de patinage (bite point)", "fr": "Le point de patinage" },
+      "objective": { "ar": "تلقا النقطة اللي كيبدا فيها l'embrayage يعطي القوة، وتقدر تحبس فيها رجلك." },
+      "explain": [
+        { "type": "text", "ar": "l'embrayage ماشي «شاعل/طافي». ملي كتطلع رجلك بشوية، الديسك كيبدا يحك فالـ volant moteur ويعطي القوة بالتدريج. النقطة اللي كتحس فيها الموطور كينقص شوية والطوموبيل باغية تمشي سميتها point de patinage." },
+        { "type": "visual", "kind": "clutchCurve" },
+        { "type": "text", "ar": "فالأزرار ديال التيليفون: المنطقة الصفرا المخططة فالپيدال ديال EMB كتوريك فين كاين patinage فهاد الطوموبيل." },
+        { "type": "warn", "ar": "إلا طلعتي رجلك بسرعة من التحت للفوق، الموطور كيطفى. إلا خليتي رجلك فالـ patinage بزاف والطوموبيل كتمشي، الديسك كيتاكل." }
+      ],
+      "demo": { "type": "lab", "module": "clutch", "script": "bite-point" },
+      "practice": { "scenario": "bite-point" },
+      "quiz": ["t02", "c01", "c03"] },
+
+    { "id": "d06", "day": 6, "section": "foundation", "minutes": 15, "skills": ["transmission", "observation"],
+      "title": { "ar": "التحرك والتوقف بنعومة", "fr": "Démarrer et s'arrêter en douceur" },
+      "objective": { "ar": "تتحرك بلا ما يطفى الموطور، وتوقف فبلاصة محددة وتأمن الطوموبيل." },
+      "explain": [
+        { "type": "steps", "ar": ["شوف فالمرايات (الريتروفيزور + ليسر) و angle mort", "l'embrayage حتى للتحت ← الفيتيس 1", "طلع حتى للـ patinage + شوية دالبنزين (~1500 tr/min)", "نزل frein à main", "طلع l'embrayage بالتدريج مع شوية دالبنزين", "باش توقف: فران بالتدريج، وتحت ~10 km/h دوس l'embrayage", "واقف: frein à main + point mort"] },
+        { "type": "legal", "ref": "d2-10-420-a42" },
+        { "type": "tip", "ar": "التيليفون: صبعك اليسري على EMB، واليمني على GAZ. الفيتيس كتبدلها ملي يكون EMB مدعوس." }
+      ],
+      "demo": { "type": "drive", "script": "move-off-stop" },
+      "practice": { "scenario": "move-stop" },
+      "quiz": ["t03", "i05", "t11"] },
+
+    { "id": "d07", "day": 7, "section": "foundation", "minutes": 12, "skills": ["transmission"],
+      "title": { "ar": "إلا طفا الموطور (calage): كيفاش ترجع", "fr": "Caler et redémarrer" },
+      "objective": { "ar": "تفهم علاش كيطفى الموطور وتعرف ترجع بسرعة وبهدوء، بلا ما يطفى بزاف." },
+      "explain": [
+        { "type": "text", "ar": "الموطور كيطفى ملي تخلي الروايض تجبدو تحت ~450 tr/min: l'embrayage طلع بسرعة، ولا بنزين ناقص، ولا وقفتي والفيتيس داخلة بلا embrayage." },
+        { "type": "steps", "ar": ["ما تخلعش: فراني ولا frein à main", "دوس l'embrayage (ولا دير N)", "شعل الموطور 🔑", "عاود démarrage بالشوية"] },
+        { "type": "visual", "kind": "torqueFlow" },
+        { "type": "tip", "ar": "شوف RPM فالكونطور: إلا بدا يطيح تحت 700 وانت كتطلع l'embrayage، حبس رجلك ولا زيد شوية دالبنزين." }
+      ],
+      "demo": { "type": "drive", "script": "stall" },
+      "practice": { "scenario": "stall-recovery" },
+      "quiz": ["t03", "t04", "t12"] },
+
+    { "id": "d08", "day": 8, "section": "control", "minutes": 12, "skills": ["steering"],
+      "title": { "ar": "الستيرينغ والبقاء فالكولوار", "fr": "Diriger et tenir sa voie" },
+      "objective": { "ar": "تسوق دورة كاملة فالطريق على اليمين ديالك، بلا ما تخرج ولا تفوت الخط الوسطاني." },
+      "explain": [
+        { "type": "legal", "ref": "d2-10-420-a3" },
+        { "type": "text", "ar": "شوف بعيد لقدام فين بغيتي تمشي، ماشي فالكابو ديال الطوموبيل. اليدين كيتبعو العينين." },
+        { "type": "text", "ar": "قبل الدورة: نقص السرعة. فوسط الدورة: بنزين خفيف ومستقر. فالخروج: رد الفولان بالتدريج." },
+        { "type": "visual", "kind": "sign", "ref": "speed50" }
+      ],
+      "demo": { "type": "diagram", "kind": "lane-keep" },
+      "practice": { "scenario": "steer-lane" },
+      "quiz": ["m01", "i04", "h01"] },
+
+    { "id": "d09", "day": 9, "section": "control", "minutes": 15, "skills": ["transmission"],
+      "title": { "ar": "طلع ونزل الفيتيسات", "fr": "Monter et descendre les rapports" },
+      "objective": { "ar": "تبدل من 1 لـ 2 لـ 3 ومن بعد تنقص، فالوقت المناسب وبنعومة." },
+      "explain": [
+        { "type": "visual", "kind": "gearSpeeds" },
+        { "type": "steps", "ar": ["حيد رجلك من البنزين", "l'embrayage حتى للتحت", "بدل الفيتيس (بلا قوة)", "طلع l'embrayage بالتدريج وزيد البنزين"] },
+        { "type": "text", "ar": "طلع الفيتيس تقريبا بين 2000 و3000 tr/min. نقص الفيتيس ملي تنقص السرعة (مثلا تحت 30 km/h رجع لـ 2). إلا نقصتي بزاف بسرعة كبيرة، الموطور كيطلع فوق الخط الأحمر (surrégime)." },
+        { "type": "lab", "module": "gearbox" }
+      ],
+      "demo": { "type": "drive", "script": "upshift" },
+      "practice": { "scenario": "gears-up-down" },
+      "quiz": ["t05", "t06", "e02", "t07"] },
+
+    { "id": "d10", "day": 10, "section": "control", "minutes": 12, "skills": ["transmission", "hazards"],
+      "title": { "ar": "الفران ومسافة التوقف", "fr": "Freinage et distances d'arrêt" },
+      "objective": { "ar": "تفراني بالتدريج، وتعرف توقف فحالة طوارئ، وتفهم علاش المسافة كتكبر مع السرعة." },
+      "explain": [
+        { "type": "visual", "kind": "stopDistance" },
+        { "type": "legal", "ref": "d2-10-420-a10" },
+        { "type": "text", "ar": "فران عادي: بكري وبالتدريج، ومن بعد كتخفف قبل ما توقف باش ما «تخبطش». فران طوارئ: فران قوي + l'embrayage مع بعض." },
+        { "type": "warn", "ar": "الأرقام تقريبية لطريق ناشفة. المطر، الروايض والعيا كيطولو المسافة." }
+      ],
+      "demo": { "type": "drive", "script": "braking" },
+      "practice": { "scenario": "braking" },
+      "quiz": ["d03", "d05", "b03", "v06"] },
+
+    { "id": "d11", "day": 11, "section": "control", "minutes": 15, "skills": ["signs", "speed"],
+      "title": { "ar": "قراءة الإشارات وحدود السرعة", "fr": "Panneaux et limitations de vitesse" },
+      "objective": { "ar": "تعرف العائلات ديال الإشارات (خطر، منع، إجبار، معلومات) والسرعات القانونية." },
+      "explain": [
+        { "type": "text", "ar": "المثلث الأحمر = خطر. الدائرة الحمرا = منع. الدائرة الزرقا = إجبار. المربع الأزرق = معلومة." },
+        { "type": "visual", "kind": "signs", "ref": "crossroadsRight,children,noEntry,speed60,roundabout,pedestrianCrossing,priorityRoad,stop" },
+        { "type": "legal", "ref": "d2-10-420-a15" },
+        { "type": "legal", "ref": "d2-10-420-a13" },
+        { "type": "legal", "ref": "d2-10-420-a17" },
+        { "type": "legal", "ref": "d2-10-420-a18" }
+      ],
+      "demo": { "type": "diagram", "kind": "school-zone" },
+      "practice": { "scenario": "city-signs" },
+      "quiz": ["s04", "s20", "v01", "v03", "s16"] },
+
+    { "id": "d12", "day": 12, "section": "control", "minutes": 15, "skills": ["priority", "observation"],
+      "title": { "ar": "STOP، cédez le passage والأولوية", "fr": "STOP, cédez le passage et priorités" },
+      "objective": { "ar": "توقف وقفة كاملة فـ STOP، وتعرف شكون عندو الأولوية قبل ما تدخل." },
+      "explain": [
+        { "type": "visual", "kind": "signs", "ref": "stop,yield" },
+        { "type": "legal", "ref": "d2-10-420-a38" },
+        { "type": "text", "ar": "«وقفة كاملة» = الكونطور فـ 0 km/h والعجلات واقفين، قبل الخط الأبيض. من بعد شوف ليسر، ليمن، ليسر، ودخل غير ملي تكون الفرصة كافية." },
+        { "type": "text", "ar": "فهاد التطبيق، السيمولاتور كيحكم على STOP غير فين كاين الخط والپانو فالخريطة، وكيعرف شكون كان جاي من الطريق ذات الأولوية." }
+      ],
+      "demo": { "type": "diagram", "kind": "stop-junction" },
+      "practice": { "scenario": "city-stop" },
+      "quiz": ["s01", "s02", "p02", "p07", "p10"] },
+
+    { "id": "d13", "day": 13, "section": "control", "minutes": 15, "skills": ["priority"],
+      "title": { "ar": "الملتقيات العادية و priorité à droite", "fr": "Intersections et priorité à droite" },
+      "objective": { "ar": "تقرب للملتقى بسرعة مناسبة، تعرف شكون يدوز اللول، وتدور مزيان." },
+      "explain": [
+        { "type": "legal", "ref": "d2-10-420-a36" },
+        { "type": "legal", "ref": "d2-10-420-a34" },
+        { "type": "legal", "ref": "d2-10-420-a35" },
+        { "type": "visual", "kind": "sign", "ref": "crossroadsRight" },
+        { "type": "tip", "ar": "حتى ملي تكون عندك الأولوية، شوف واش الآخر عاق بيك قبل ما تدخل." }
+      ],
+      "demo": { "type": "diagram", "kind": "prio-right" },
+      "practice": { "scenario": "city-priority" },
+      "quiz": ["p01", "p03", "p05", "p08", "s05"] },
+
+    { "id": "d14", "day": 14, "section": "control", "minutes": 12, "skills": ["signs", "priority"],
+      "title": { "ar": "الضو (feux tricolores)", "fr": "Les feux tricolores" },
+      "objective": { "ar": "تحترم الأحمر والأصفر، وتقرب للضو بسرعة اللي تقدر توقف فيها." },
+      "explain": [
+        { "type": "legal", "ref": "d2-10-420-a69" },
+        { "type": "legal", "ref": "d2-10-420-a68" },
+        { "type": "text", "ar": "ملي يبدل الضو لأصفر: إلا كنتي تقدر توقف بأمان، وقف. فهاد السيمولاتور، الأحمر اللي بدا قبل أقل من نص ثانية ما كيتحسبش عليك (عدالة)." }
+      ],
+      "demo": { "type": "diagram", "kind": "lights" },
+      "practice": { "scenario": "city-lights" },
+      "quiz": ["l01", "l02", "l03", "p04", "p09"] },
+
+    { "id": "d15", "day": 15, "section": "urban", "minutes": 15, "skills": ["priority", "observation"],
+      "title": { "ar": "الرون-پوان: الدخول، الدوران والخروج", "fr": "Giratoires : entrée, circulation, sortie" },
+      "objective": { "ar": "تعطي الأولوية للي داير، تدور فالاتجاه الصحيح، وتخرج مع clignotant ليمن." },
+      "explain": [
+        { "type": "legal", "ref": "d2-10-420-a78" },
+        { "type": "legal", "ref": "d2-10-420-a37" },
+        { "type": "visual", "kind": "signs", "ref": "roundaboutAhead,yield,roundabout" },
+        { "type": "warn", "ar": "القاعدة ديال art. 78 كتخص الرون-پوان «اللي معلن بالإشارة المناسبة». فالطريق، تبع ديما الإشارات اللي فالمدخل." },
+        { "type": "steps", "ar": ["نقص قبل المدخل", "شوف ليسر: واش جاي شي واحد داير؟", "دخل فالفرصة ودور عكس عقارب الساعة", "clignotant ليمن قبل السورتي ديالك", "خرج بحذر (راجلين فالسورتي)"] }
+      ],
+      "demo": { "type": "diagram", "kind": "roundabout" },
+      "practice": { "scenario": "city-roundabout" },
+      "quiz": ["r01", "r02", "r03", "r04", "s10"] },
+
+    { "id": "d16", "day": 16, "section": "urban", "minutes": 12, "skills": ["observation", "steering"],
+      "title": { "ar": "تبديل الكولوار والتموضع", "fr": "Changer de voie et se positionner" },
+      "objective": { "ar": "تبدل الكولوار بأمان: مراية ← clignotant ← angle mort ← حركة نعومة." },
+      "explain": [
+        { "type": "legal", "ref": "d2-10-420-a42" },
+        { "type": "diagram", "kind": "lane-change" },
+        { "type": "text", "ar": "بدل الكولوار غير فين الخط متقطع، وبحركة صغيرة ديال الفولان (فالسرعة الكبيرة، شوية دالدوران كيكفي)." }
+      ],
+      "demo": { "type": "diagram", "kind": "lane-change" },
+      "practice": { "scenario": "city-lanes" },
+      "quiz": ["i02", "m01", "m05", "i01"] },
+
+    { "id": "d17", "day": 17, "section": "urban", "minutes": 12, "skills": ["observation"],
+      "title": { "ar": "clignotants، المرايات و angle mort", "fr": "Clignotants, rétroviseurs et angle mort" },
+      "objective": { "ar": "تنبه الآخرين قبل كل دورة، وتشوف angle mort قبل ما تدور ليمن (موطورات وبيكالات)." },
+      "explain": [
+        { "type": "visual", "kind": "mirrors" },
+        { "type": "legal", "ref": "d2-10-420-a42" },
+        { "type": "text", "ar": "شعل clignotant قبل ~3 ثواني ديال الحركة. من بعد الدورة، تأكد بلي طفا (الفولان كيطفيه بوحدو غالبا)." }
+      ],
+      "demo": { "type": "diagram", "kind": "turn-right" },
+      "practice": { "scenario": "city-observation" },
+      "quiz": ["i03", "i06", "h03", "i05"] },
+
+    { "id": "d18", "day": 18, "section": "urban", "minutes": 12, "skills": ["hazards"],
+      "title": { "ar": "الراجلين و passages piétons", "fr": "Piétons et passages piétons" },
+      "objective": { "ar": "تنقص قرب passages piétons وتوقف للراجل اللي بدا يقطع، بلا ما توقف فوق الخطوط." },
+      "explain": [
+        { "type": "legal", "ref": "d2-10-420-a126" },
+        { "type": "legal", "ref": "d2-10-420-a87" },
+        { "type": "legal", "ref": "d2-10-420-a127" },
+        { "type": "legal", "ref": "d2-10-420-a49" },
+        { "type": "tip", "ar": "الراجلين، الأطفال، الشيوخ، البيكالات والموطورات هوما «المستعملين الضعاف»: كون صبور معاهم." }
+      ],
+      "demo": { "type": "diagram", "kind": "crosswalk" },
+      "practice": { "scenario": "city-pedestrians" },
+      "quiz": ["w01", "w02", "w03", "w05", "o06"] },
+
+    { "id": "d19", "day": 19, "section": "urban", "minutes": 12, "skills": ["hazards", "speed"],
+      "title": { "ar": "مسافة الأمان، توقع الخطر والسرعة فالمدينة", "fr": "Distances, anticipation et vitesse en ville" },
+      "objective": { "ar": "تبقا على الأقل 2 ثواني ورا اللي قدامك، وتقرا الطريق باش تتوقع." },
+      "explain": [
+        { "type": "legal", "ref": "d2-10-420-a10" },
+        { "type": "text", "ar": "القانون كيقول «مسافة كافية». قاعدة 2 ثواني نصيحة عملية: ختار علامة، ملي اللي قدامك يدوز عليها عد «واحد-و-عشرين، جوج-و-عشرين»." },
+        { "type": "visual", "kind": "stopDistance" }
+      ],
+      "demo": { "type": "diagram", "kind": "following" },
+      "practice": { "scenario": "city-following" },
+      "quiz": ["d01", "d02", "h02", "h04"] },
+
+    { "id": "d20", "day": 20, "section": "urban", "minutes": 12, "skills": ["transmission", "steering"],
+      "title": { "ar": "المنعرجات، الطلعات والهبطات", "fr": "Virages, montées et descentes" },
+      "objective": { "ar": "تختار الفيتيس المناسبة فالطلعة والهبطة، وتنقص قبل المنعرج." },
+      "explain": [
+        { "type": "text", "ar": "فالطلعة: الموطور محتاج القوة → فيتيس صغيرة. فالهبطة: خلي الفيتيس داخلة باش يخدم frein moteur وما يسخنوش الفرانات." },
+        { "type": "visual", "kind": "signs", "ref": "curveRight,steepHill" },
+        { "type": "text", "ar": "المنعرج: نقص قبل ما تدخل (فالخط المستقيم)، ومن بعد بنزين خفيف فالوسط." }
+      ],
+      "demo": { "type": "diagram", "kind": "bend" },
+      "practice": { "scenario": "hills-bends" },
+      "quiz": ["t07", "v07", "st02", "k03"] },
+
+    { "id": "d21", "day": 21, "section": "urban", "minutes": 15, "skills": ["transmission"],
+      "title": { "ar": "Démarrage en côte", "fr": "Démarrage en côte" },
+      "objective": { "ar": "تتحرك فالطلعة بلا ما ترجع لور وبلا ما يطفى الموطور، باستعمال frein à main." },
+      "explain": [
+        { "type": "steps", "ar": ["frein à main مرفوع، الفيتيس 1", "بنزين ~2000 tr/min", "طلع l'embrayage حتى تحس الكابو كيطلع شوية والموطور كينقص (patinage)", "نزل frein à main بشوية", "طلع l'embrayage بالتدريج وزيد البنزين"] },
+        { "type": "visual", "kind": "clutchCurve" },
+        { "type": "lab", "module": "clutch" }
+      ],
+      "demo": { "type": "drive", "script": "hill-start" },
+      "practice": { "scenario": "hill-start" },
+      "quiz": ["t09", "k03", "t02"] },
+
+    { "id": "d22", "day": 22, "section": "manoeuvres", "minutes": 15, "skills": ["manoeuvres"],
+      "title": { "ar": "اختيار بلاصة الپاركينغ والدخول ليها", "fr": "Choisir une place et s'y garer" },
+      "objective": { "ar": "تختار بلاصة مسموحة وتدخل ليها مستقيم ووسط الخطوط." },
+      "explain": [
+        { "type": "legal", "ref": "d2-10-420-a46" },
+        { "type": "legal", "ref": "d2-10-420-a48" },
+        { "type": "text", "ar": "التقنية: سرعة ديال المشي (patinage)، شوف المرايات، ودور الفولان ملي تكون المراية ديالك مقابلة مع الخط ديال البلاصة." },
+        { "type": "tip", "ar": "الكاميرا 🎥 (فوق) كتعاونك تفهم الموقع ديال الطوموبيل — فالامتحان الحقيقي ما كايناش!" }
+      ],
+      "demo": { "type": "diagram", "kind": "bay-park" },
+      "practice": { "scenario": "park-bay" },
+      "quiz": ["k01", "k02", "k06", "k04"] },
+
+    { "id": "d23", "day": 23, "section": "manoeuvres", "minutes": 15, "skills": ["manoeuvres", "observation"],
+      "title": { "ar": "الرجوع لور والپاركينغ بالرجوع", "fr": "Marche arrière et rangement en bataille" },
+      "objective": { "ar": "ترجع لور فخط مستقيم، ومن بعد تدخل لبلاصة بالرجوع." },
+      "explain": [
+        { "type": "text", "ar": "فالرجوع لور: الفولان كيدور «فاتجاه» اللي بغيتي يمشي ليه الضهر ديال الطوموبيل. السرعة صغيرة بزاف: l'embrayage فالـ patinage، بلا بنزين تقريبا." },
+        { "type": "text", "ar": "شوف فالمرايات والريتروفيزور، ودور راسك. خاصك تعطي الأولوية للي دايز." }
+      ],
+      "demo": { "type": "diagram", "kind": "reverse-park" },
+      "practice": { "scenario": "reverse-park", "guided": "reverse-straight" },
+      "quiz": ["k04", "t08", "i04"] },
+
+    { "id": "d24", "day": 24, "section": "manoeuvres", "minutes": 15, "skills": ["manoeuvres"],
+      "title": { "ar": "Créneau — الپاركينغ بالجنب", "fr": "Le créneau" },
+      "objective": { "ar": "تدخل بين جوج طوموبيلات موازي للتروطوار." },
+      "explain": [
+        { "type": "steps", "ar": ["وقف موازي للطوموبيل اللي قدام البلاصة (~0.8 م بيناتكم)", "R + مرايات + angle mort", "رجع حتى يكون الضهر ديالك محاذي للضهر ديالها، دور كامل ليمن", "ملي تولي مايلة ~45°: رد الفولان للوسط ورجع", "دور كامل ليسر حتى تولي موازية", "صحح لقدام/لور ووقف وسط البلاصة"] },
+        { "type": "warn", "ar": "بشوية بزاف: ما تضربش الطوموبيلات ولا التروطوار." }
+      ],
+      "demo": { "type": "diagram", "kind": "parallel-park" },
+      "practice": { "scenario": "parallel" },
+      "quiz": ["k05", "k04", "w04"] },
+
+    { "id": "d25", "day": 25, "section": "manoeuvres", "minutes": 15, "skills": ["priority", "hazards", "observation"],
+      "title": { "ar": "ملتقيات معقدة وتوقع الخطر", "fr": "Carrefours complexes et anticipation" },
+      "objective": { "ar": "تجمع كلشي: الضو، STOP، الرون-پوان، الراجلين والطوموبيلات." },
+      "explain": [
+        { "type": "text", "ar": "الملتقى المعقد: نقص بكري، اختار الكولوار المناسب، وشوف «شكون يقدر يدير شي حاجة ما متوقعاش»: طوموبيل خارجة، راجل، موطور." },
+        { "type": "tip", "ar": "سول راسك: «شنو غادي يوقع إلا…؟» وكون مستعد." }
+      ],
+      "demo": { "type": "diagram", "kind": "hazard" },
+      "practice": { "scenario": "city-complex" },
+      "quiz": ["h02", "h03", "p09", "r05", "w05"] },
+
+    { "id": "d26", "day": 26, "section": "independent", "minutes": 15, "skills": ["priority", "hazards", "manoeuvres", "speed"],
+      "title": { "ar": "طريق طويلة فالمدينة + پاركينغ", "fr": "Long parcours urbain + stationnement" },
+      "objective": { "ar": "تسوق بوحدك طريق كاملة: مدرسة، ضو، رون-پوان، ومن بعد تپاركي." },
+      "explain": [
+        { "type": "text", "ar": "اليوم المدرب كيعطيك غير الاتجاهات. نتا اللي كتقرر الفيتيس، السرعة، والمراقبة." }
+      ],
+      "demo": { "type": "diagram", "kind": "route" },
+      "practice": { "scenario": "city-long-park" },
+      "quiz": ["v01", "p01", "r01", "w01", "k02"] },
+
+    { "id": "d27", "day": 27, "section": "independent", "minutes": 15, "skills": ["motorway", "observation"],
+      "title": { "ar": "التحضير للأوطوروت", "fr": "Préparer l'entrée sur autoroute" },
+      "objective": { "ar": "تعرف قواعد الأوطوروت وتدخل من البريتيل بسرعة مناسبة." },
+      "explain": [
+        { "type": "visual", "kind": "sign", "ref": "motorway" },
+        { "type": "legal", "ref": "d2-10-420-a148" },
+        { "type": "legal", "ref": "d2-10-420-a149" },
+        { "type": "legal", "ref": "d2-10-420-a154" },
+        { "type": "legal", "ref": "d2-10-420-a18" }
+      ],
+      "demo": { "type": "diagram", "kind": "merge" },
+      "practice": { "scenario": "mw-enter" },
+      "quiz": ["a01", "a08", "a03", "s19", "v02"] },
+
+    { "id": "d28", "day": 28, "section": "independent", "minutes": 15, "skills": ["motorway", "hazards"],
+      "title": { "ar": "الأوطوروت: الكولوارات والمسافة", "fr": "Autoroute : voies et distances" },
+      "objective": { "ar": "تبقا فاليمين، تحترم 60–120، وتخلي مسافة الأمان." },
+      "explain": [
+        { "type": "legal", "ref": "d2-10-420-a3" },
+        { "type": "legal", "ref": "d2-10-420-a152" },
+        { "type": "legal", "ref": "d2-10-420-a10" },
+        { "type": "text", "ar": "بـ 120 km/h كتمشي 33 م فالثانية: 2 ثواني = ~67 م. BAU غير للحالات الطارئة." }
+      ],
+      "demo": { "type": "diagram", "kind": "following" },
+      "practice": { "scenario": "mw-lanes" },
+      "quiz": ["a06", "a02", "d04", "v05", "h07"] },
+
+    { "id": "d29", "day": 29, "section": "independent", "minutes": 15, "skills": ["motorway", "observation"],
+      "title": { "ar": "الدوبلاج، الخروج والتعامل مع الخطر", "fr": "Dépasser, sortir et réagir aux dangers" },
+      "objective": { "ar": "تدوبلي بأمان من اليسار، ترجع لليمين، وتخرج من السورتي الصحيحة." },
+      "explain": [
+        { "type": "legal", "ref": "d2-10-420-a24" },
+        { "type": "legal", "ref": "d2-10-420-a27" },
+        { "type": "legal", "ref": "d2-10-420-a32" },
+        { "type": "legal", "ref": "d2-10-420-a157" },
+        { "type": "legal", "ref": "d2-10-420-a154" }
+      ],
+      "demo": { "type": "diagram", "kind": "overtake" },
+      "practice": { "scenario": "mw-overtake-exit" },
+      "quiz": ["o01", "o02", "o04", "a04", "a05", "a09"] },
+
+    { "id": "d30", "day": 30, "section": "independent", "minutes": 20, "skills": ["transmission", "steering", "observation", "speed", "signs", "priority", "hazards", "manoeuvres"],
+      "title": { "ar": "التقييم النهائي", "fr": "Évaluation finale" },
+      "objective": { "ar": "تجمع كلشي اللي تعلمتي فطريق وحدة، وتجاوب على أسئلة من الدروس كاملين." },
+      "explain": [
+        { "type": "text", "ar": "هاد التقييم بحال امتحان: المدرب ما كيعطيكش نصائح وسط السياقة، والخطأ الخطير (critique) كيعني الرسوب." },
+        { "type": "warn", "ar": "هادا امتحان ديال التطبيق، ماشي الامتحان الرسمي ديال permis." }
+      ],
+      "demo": { "type": "diagram", "kind": "route" },
+      "practice": { "scenario": "exam-final" },
+      "quizRandom": 10 }
+  ]
+}

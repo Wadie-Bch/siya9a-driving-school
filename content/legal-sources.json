@@ -1,0 +1,291 @@
+{
+ "_doc": "Stored locally so explanations work offline. Article summaries are paraphrases written for this app, not the official text. Always rely on the official text published in the Bulletin officiel.",
+ "researchedOn": "2026-10-15",
+ "sources": [
+  {
+   "id": "loi-52-05",
+   "title": "Dahir n° 1-10-07 du 26 safar 1431 (11 février 2010) portant promulgation de la loi n° 52-05 portant code de la route",
+   "publisher": "NARSA (Agence Nationale de la Sécurité Routière) — copie PDF en arabe",
+   "url": "https://www.narsa.ma/fr/code-de-la-route",
+   "status": "official",
+   "note": "Loi-cadre. Modifiée et complétée notamment par la loi n° 116.14 (Dahir n° 1-16-106), également publiée sur la même page."
+  },
+  {
+   "id": "d2-10-420",
+   "title": "Décret n° 2-10-420 du 20 chaoual 1431 (29 septembre 2010) pris pour l'application de la loi n° 52-05 — règles de la circulation routière, Bulletin officiel n° 5878 bis du 30/09/2010",
+   "publisher": "Texte consulté via une reproduction intégrale (maroctl.com); le PDF officiel du BO n'a pas pu être téléchargé pendant la recherche",
+   "url": "https://maroctl.com/routier/code-de-la-route/decret-n-2-10-420-regles-de-la-circulation-routiere/",
+   "status": "verified-secondary",
+   "note": "Un projet de modification des décrets 2.10.420 et 2.10.421 a été annoncé (EcoActu). Vérifier la version en vigueur dans le BO."
+  },
+  {
+   "id": "narsa-permis",
+   "title": "NARSA — Khadamat : Permis de conduire (catégories, heures minimales de formation, épreuves)",
+   "publisher": "NARSA",
+   "url": "https://khadamatnarsa.ma/fr/services/permis-de-conduire",
+   "status": "official",
+   "note": "Catégorie B : 20 h de théorie et 20 h de pratique minimum. Le nombre exact de questions et la note de passage de l'épreuve théorique ne sont PAS indiqués sur cette page."
+  },
+  {
+   "id": "osm-copyright",
+   "title": "OpenStreetMap — Copyright and License (ODbL 1.0)",
+   "publisher": "OpenStreetMap Foundation",
+   "url": "https://www.openstreetmap.org/copyright",
+   "status": "official"
+  }
+ ],
+ "articles": [
+  {
+   "id": "d2-10-420-a3",
+   "source": "d2-10-420",
+   "article": "3",
+   "fr": "En marche normale, le conducteur maintient son véhicule près du bord droit de la chaussée.",
+   "ar": "فالسير العادي، خاص السائق يبقا قريب من الجهة اليمنى ديال الطريق."
+  },
+  {
+   "id": "d2-10-420-a10",
+   "source": "d2-10-420",
+   "article": "10",
+   "fr": "Le conducteur doit garder une distance de sécurité suffisante pour éviter une collision; hors agglomération, au moins 70 m entre véhicules d'un même convoi (100 m pour les véhicules lourds ou de plus de 7 m).",
+   "ar": "خاصك تخلي مسافة أمان كافية باش تتفادى الاصطدام. خارج المدينة، بين الطوموبيلات ديال نفس القافلة 70 م على الأقل (100 م للكبار)."
+  },
+  {
+   "id": "d2-10-420-a13",
+   "source": "d2-10-420",
+   "article": "13",
+   "fr": "Vitesse limitée à 30 km/h à proximité de groupes de piétons.",
+   "ar": "30 km/h قرب جماعات ديال الراجلين."
+  },
+  {
+   "id": "d2-10-420-a15",
+   "source": "d2-10-420",
+   "article": "15",
+   "fr": "En agglomération, la vitesse est limitée à 60 km/h (peut être portée à 80 km/h sur certains axes par arrêté conjoint).",
+   "ar": "داخل المدينة (agglomération)، السرعة محدودة فـ 60 km/h، وممكن تولي 80 فبعض الطرقان الكبار بقرار."
+  },
+  {
+   "id": "d2-10-420-a16",
+   "source": "d2-10-420",
+   "article": "16",
+   "fr": "Les conducteurs en période probatoire ne doivent pas dépasser 90 km/h.",
+   "ar": "السائق اللي باقي فـ permis probatoire ما يفوتش 90 km/h."
+  },
+  {
+   "id": "d2-10-420-a17",
+   "source": "d2-10-420",
+   "article": "17",
+   "fr": "Hors agglomération : 100 km/h pour les véhicules légers (jusqu'à 3 500 kg), limites inférieures pour les véhicules plus lourds.",
+   "ar": "خارج المدينة: 100 km/h للطوموبيلات الخفيفة، وأقل للثقال."
+  },
+  {
+   "id": "d2-10-420-a18",
+   "source": "d2-10-420",
+   "article": "18",
+   "fr": "Autoroute : 120 km/h pour les véhicules légers; en circulation normale, la vitesse minimale est de 60 km/h.",
+   "ar": "فالأوطوروت: 120 km/h للطوموبيلات الخفيفة، وفالسير العادي ما تنقصش من 60 km/h."
+  },
+  {
+   "id": "d2-10-420-a24",
+   "source": "d2-10-420",
+   "article": "24",
+   "fr": "Le dépassement s'effectue par la gauche.",
+   "ar": "الدوبلاج كيكون من ليسر."
+  },
+  {
+   "id": "d2-10-420-a27",
+   "source": "d2-10-420",
+   "article": "27",
+   "fr": "Avant de dépasser, s'assurer de pouvoir le faire sans danger et de pouvoir reprendre sa place; laisser au moins 1 m avec cyclistes, piétons et animaux.",
+   "ar": "قبل ما تدوبلي تأكد بلي تقدر بلا خطر وتقدر ترجع لبلاصتك، وخلي 1 م على الأقل مع البيكالة والراجلين."
+  },
+  {
+   "id": "d2-10-420-a28",
+   "source": "d2-10-420",
+   "article": "28",
+   "fr": "Dépassement par la droite permis seulement dans des cas limités, notamment lorsque le véhicule devant signale qu'il tourne à gauche, ou sur les chaussées à sens unique.",
+   "ar": "الدوبلاج من اليمين مسموح غير فحالات محدودة: بحال ملي الطوموبيل اللي قدام معلنة بلي غادي تدور ليسر، ولا فالطريق ديال اتجاه واحد."
+  },
+  {
+   "id": "d2-10-420-a32",
+   "source": "d2-10-420",
+   "article": "32",
+   "fr": "Après un dépassement, reprendre sa place; le conducteur dépassé serre à droite et n'accélère pas (art. 31–32).",
+   "ar": "من بعد الدوبلاج رجع لبلاصتك. واللي تدوبلا خاصو يقرب لليمين وما يزيدش فالسرعة (art. 31–32)."
+  },
+  {
+   "id": "d2-10-420-a34",
+   "source": "d2-10-420",
+   "article": "34",
+   "fr": "Aborder les intersections à une allure adaptée à la visibilité et s'assurer que la voie croisée est libre.",
+   "ar": "قرب للملتقى بسرعة مناسبة للرؤية، وتأكد بلي الطريق الأخرى خاوية."
+  },
+  {
+   "id": "d2-10-420-a35",
+   "source": "d2-10-420",
+   "article": "35",
+   "fr": "Pour tourner à droite, serrer le bord droit; pour tourner à gauche, serrer à gauche sans franchir l'axe sur une route à double sens.",
+   "ar": "باش تدور ليمن قرب لليمين، وباش تدور ليسر قرب لليسر بلا ما تفوت الخط الوسطاني فالطريق اللي فيها جوج اتجاهات."
+  },
+  {
+   "id": "d2-10-420-a36",
+   "source": "d2-10-420",
+   "article": "36",
+   "fr": "À une intersection de routes de même priorité, le conducteur venant de gauche cède le passage (priorité à droite).",
+   "ar": "فالملتقى بين طرقان عندهم نفس الأولوية، اللي جاي من ليسر كيعطي الطريق للي جاي من ليمن (priorité à droite)."
+  },
+  {
+   "id": "d2-10-420-a37",
+   "source": "d2-10-420",
+   "article": "37",
+   "fr": "Dans un carrefour giratoire, le changement de voie reste soumis aux règles de priorité et doit être signalé.",
+   "ar": "داخل الرون-پوان، تبديل الكولوار كيبقى خاضع لقواعد الأولوية وخاصو يتعلن (clignotant)."
+  },
+  {
+   "id": "d2-10-420-a38",
+   "source": "d2-10-420",
+   "article": "38",
+   "fr": "Aux intersections signalées « stop », marquer un temps d'arrêt à la limite de la chaussée abordée, céder le passage, puis s'engager sans danger.",
+   "ar": "فـ STOP: وقف وقفة كاملة فحدود الطريق اللي غادي تدخل ليها، عطي الأولوية، ومن بعد دخل غير ملي ما يكونش خطر."
+  },
+  {
+   "id": "d2-10-420-a39",
+   "source": "d2-10-420",
+   "article": "39",
+   "fr": "Céder le passage aux véhicules de police, gendarmerie, contrôle routier, autorité et d'intervention urgente faisant usage de leurs signaux spéciaux.",
+   "ar": "عطي الأولوية لسيارات البوليس، الدرك، المراقبة، السلطة والتدخل المستعجل ملي كيستعملو الإشارات الخاصة ديالهم."
+  },
+  {
+   "id": "d2-10-420-a42",
+   "source": "d2-10-420",
+   "article": "42",
+   "fr": "Avant de changer de direction, ralentir ou quitter sa place, s'assurer que c'est sans danger et avertir (feux indicateurs, feux stop ou signes du bras).",
+   "ar": "قبل ما تبدل الاتجاه ولا تنقص ولا تخرج من البلاصة: تأكد بلي ما كاين خطر ونبّه الآخرين (clignotant)."
+  },
+  {
+   "id": "d2-10-420-a43",
+   "source": "d2-10-420",
+   "article": "43",
+   "fr": "L'avertisseur sonore ne doit être utilisé qu'en cas de nécessité (danger immédiat en agglomération); usage prolongé interdit.",
+   "ar": "الكلاكسون غير ملي كاين ضرورة (خطر قريب فالمدينة)، وممنوع تبقا ضاغط عليه."
+  },
+  {
+   "id": "d2-10-420-a44",
+   "source": "d2-10-420",
+   "article": "44",
+   "fr": "La nuit, avertir par des appels de projecteurs; l'avertisseur sonore seulement en cas d'extrême nécessité.",
+   "ar": "بالليل نبه بالضو (appels de phares)، والكلاكسون غير فالضرورة القصوى."
+  },
+  {
+   "id": "d2-10-420-a46",
+   "source": "d2-10-420",
+   "article": "46",
+   "fr": "Stationnement interdit notamment sur les trottoirs, en double file, aux arrêts de bus, devant les entrées carrossables et près des bouches d'incendie.",
+   "ar": "ممنوع الپاركينغ فوق التروطوار، فـ double file، فبلاصة الطوبيس، قدام الباب ديال الگاراج، وقرب bouche d'incendie."
+  },
+  {
+   "id": "d2-10-420-a48",
+   "source": "d2-10-420",
+   "article": "48",
+   "fr": "Distance minimale des intersections pour stationner (en agglomération : 12 m des intersections signalisées, 5 m sinon).",
+   "ar": "ما تپاركيش قريب من الملتقى: 12 م إلا كان فيه إشارات و5 م إلا ما فيهش (فالمدينة)."
+  },
+  {
+   "id": "d2-10-420-a49",
+   "source": "d2-10-420",
+   "article": "49",
+   "fr": "Ne pas ouvrir une portière ni descendre sans s'être assuré que c'est sans danger.",
+   "ar": "ما تحلش الباب ولا تهبط حتى تتأكد بلي ما كاين خطر."
+  },
+  {
+   "id": "d2-10-420-a68",
+   "source": "d2-10-420",
+   "article": "68",
+   "fr": "Les feux de signalisation en fonctionnement priment sur les panneaux de priorité de la même intersection.",
+   "ar": "الضو ملي خدام كيغلب على panneaux ديال الأولوية فنفس الملتقى."
+  },
+  {
+   "id": "d2-10-420-a69",
+   "source": "d2-10-420",
+   "article": "69",
+   "fr": "Feu rouge : interdiction absolue de passer. Feu jaune : arrêt obligatoire sauf si l'arrêt ne peut se faire en sécurité. Feu vert : passage autorisé si la voie est libre, sans bloquer l'intersection. Jaune clignotant : prudence.",
+   "ar": "الأحمر: ممنوع تدوز بتاتا. الأصفر: خاصك توقف إلا إلا كان التوقف خطير. الأخضر: دوز إلا كانت الطريق خاوية وبلا ما تسد الملتقى. الأصفر اللي كيطفي ويشعل: رد البال."
+  },
+  {
+   "id": "d2-10-420-a72",
+   "source": "d2-10-420",
+   "article": "72",
+   "fr": "Les signaux pour piétons utilisent le rouge et le vert.",
+   "ar": "إشارات الراجلين: أحمر وأخضر."
+  },
+  {
+   "id": "d2-10-420-a74",
+   "source": "d2-10-420",
+   "article": "74",
+   "fr": "Le feu rouge clignotant est réservé aux passages à niveau et impose l'arrêt absolu; le jaune clignotant impose la prudence.",
+   "ar": "الأحمر اللي كيطفي ويشعل مخصص لممرات السكة ويعني وقفة مطلقة؛ الأصفر اللي كيطفي ويشعل = رد البال."
+  },
+  {
+   "id": "d2-10-420-a78",
+   "source": "d2-10-420",
+   "article": "78",
+   "fr": "Avant de s'engager dans un carrefour à sens giratoire annoncé par la signalisation appropriée, céder le passage aux véhicules qui y circulent.",
+   "ar": "قبل ما تدخل لرون-پوان معلّم بالإشارة ديالو، عطي الأولوية للطوموبيلات اللي دايرين فيه."
+  },
+  {
+   "id": "d2-10-420-a87",
+   "source": "d2-10-420",
+   "article": "87",
+   "fr": "Passages pour piétons marqués par des bandes blanches; arrêt et stationnement interdits dessus.",
+   "ar": "passage piétons معلّم بخطوط بيضين، وممنوع توقف ولا تپاركي فوقو."
+  },
+  {
+   "id": "d2-10-420-a126",
+   "source": "d2-10-420",
+   "article": "126",
+   "fr": "Réduire la vitesse à l'approche des passages pour piétons; le piéton déjà engagé a la priorité.",
+   "ar": "نقص السرعة ملي تقرب لـ passage piétons. الراجل اللي بدا يقطع عندو الأولوية."
+  },
+  {
+   "id": "d2-10-420-a127",
+   "source": "d2-10-420",
+   "article": "127",
+   "fr": "Dépassement interdit à l'approche des passages pour piétons et des véhicules arrêtés pour laisser passer les piétons (art. 127–128).",
+   "ar": "ممنوع الدوبلاج قرب passages piétons وقرب الطوموبيلات الواقفة باش يدوزو الراجلين (art. 127–128)."
+  },
+  {
+   "id": "d2-10-420-a148",
+   "source": "d2-10-420",
+   "article": "148",
+   "fr": "Sur autoroute, l'accès et la sortie se font uniquement par les bretelles prévues.",
+   "ar": "الدخول والخروج فالأوطوروت غير من الطرقان المخصصة (bretelles)."
+  },
+  {
+   "id": "d2-10-420-a149",
+   "source": "d2-10-420",
+   "article": "149",
+   "fr": "Accès à l'autoroute interdit aux piétons, cycles, animaux et véhicules ne pouvant atteindre 60 km/h.",
+   "ar": "ممنوع على الراجلين، البيكالات، الحيوانات، والعربات اللي ما تقدرش توصل 60 km/h يدخلو للأوطوروت."
+  },
+  {
+   "id": "d2-10-420-a152",
+   "source": "d2-10-420",
+   "article": "152",
+   "fr": "Sur autoroute, interdits notamment : marche arrière, demi-tour, usage du terre-plein central, arrêt ou circulation sur la bande d'arrêt d'urgence (hors nécessité).",
+   "ar": "فالأوطوروت ممنوع: الرجوع لور، demi-tour، الدخول للوسط، والوقوف ولا السير فـ bande d'arrêt d'urgence بلا ضرورة."
+  },
+  {
+   "id": "d2-10-420-a154",
+   "source": "d2-10-420",
+   "article": "154",
+   "fr": "Sur la voie d'accélération, s'insérer à une vitesse proche de celle de la circulation, en profitant d'un intervalle suffisant; pour sortir, se placer à droite avant la sortie.",
+   "ar": "فـ voie d'accélération، دخل بسرعة قريبة من سرعة الأوطوروت فشي فرصة كافية. وباش تخرج، دوز لليمين قبل السورتي."
+  },
+  {
+   "id": "d2-10-420-a157",
+   "source": "d2-10-420",
+   "article": "157",
+   "fr": "Lors de dépassements successifs sur autoroute, rester dans sa voie et ne pas se rabattre brusquement.",
+   "ar": "فالدوبلاجات المتتابعة فالأوطوروت، بقا فالكولوار ديالك وما ترجعش بقوة قدام الآخرين."
+  }
+ ]
+}

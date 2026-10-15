@@ -1,0 +1,609 @@
+{
+ "_doc": "Mechanics lab modules. The 3D scenes are built in src/js/lab/*. Every module that shows rpm/torque/ratios reads the SAME VehicleParams and VehicleController used by the driving simulator. 'notes' separates the real principle, the simplified game model and approximations.",
+ "modules": [
+  {
+   "id": "clutch",
+   "icon": "🎚️",
+   "order": 1,
+   "quizTopic": "lab-clutch",
+   "title": "l'embrayage",
+   "fr": "Embrayage",
+   "summary": "شوف كيفاش الديسك كيتزير على الـ volant moteur، وفين كاين point de patinage، وعلاش كيطفى الموطور.",
+   "components": {
+    "flywheel": {
+     "ar": "Volant moteur",
+     "fr": "Volant moteur",
+     "desc": "مركب على vilebrequin، كيدور ديما مع الموطور. الوجه ديالو هو السطح اللي كيحك فيه الديسك."
+    },
+    "disc": {
+     "ar": "Disque d'embrayage",
+     "fr": "Disque d'embrayage",
+     "desc": "ديسك فيه garnitures (مادة الاحتكاك) من الجهتين. مركب على cannelures ديال arbre primaire ديال البواط."
+    },
+    "plate": {
+     "ar": "Plateau de pression",
+     "fr": "Plateau de pression",
+     "desc": "كيزير الديسك على الـ volant بقوة الريسور (diaphragme)."
+    },
+    "diaphragm": {
+     "ar": "Ressort diaphragme",
+     "fr": "Diaphragme",
+     "desc": "ريسور على شكل صحن: ملي كتدفع الوسط ديالو (les doigts)، الحافة ديالو كتحرر plateau."
+    },
+    "cover": {
+     "ar": "Couvercle (mécanisme)",
+     "fr": "Couvercle",
+     "desc": "مقبوط بالبولونات على الـ volant ويحمل plateau والريسور."
+    },
+    "bearing": {
+     "ar": "Butée d'embrayage",
+     "fr": "Butée",
+     "desc": "رولمان كيتزحلق على arbre primaire وكيدفع doigts ديال الريسور ملي تدوس."
+    },
+    "fork": {
+     "ar": "Fourchette",
+     "fr": "Fourchette",
+     "desc": "دراع كيحول حركة الپيدال (câble ولا hydraulique) لحركة la butée."
+    },
+    "shaft": {
+     "ar": "Arbre primaire",
+     "fr": "Arbre primaire (entrée de boîte)",
+     "desc": "المحور اللي داخل للبواط: كيدور بسرعة الديسك."
+    }
+   },
+   "steps": [
+    {
+     "ar": "هادي l'embrayage مفكوكة (vue éclatée). قيس على أي قطعة باش تعرف سميتها والخدمة ديالها.",
+     "set": {
+      "view": "exploded",
+      "pedal": 0
+     }
+    },
+    {
+     "ar": "الپيدال طالع (0%): الريسور كيزير plateau على الديسك، والديسك على الـ volant. كلشي كيدور بنفس السرعة → «embrayé».",
+     "set": {
+      "view": "cutaway",
+      "pedal": 0,
+      "gear": "N"
+     }
+    },
+    {
+     "ar": "دوس الپيدال (100%): la butée كتدفع doigts، plateau كيتحرر، والديسك ما بقاش مزير → «débrayé». شوف الديسك كينقص فالسرعة بوحدو.",
+     "set": {
+      "pedal": 1
+     }
+    },
+    {
+     "ar": "دابا الفيتيس 1 و frein à main مرفوع. طلع الپيدال بشوية حتى تشوف الـ couple transmis كيبدا يطلع و RPM كينقص شوية: هادا هو point de patinage.",
+     "set": {
+      "pedal": 0.75,
+      "gear": "1",
+      "handbrake": true
+     },
+     "task": "bite"
+    },
+    {
+     "ar": "جرب الغلطة: طلق الپيدال دغيا (0%) والطوموبيل واقفة والفيتيس 1 → الموطور ما قدرش يدور الطوموبيل كاملة فلحظة → calage.",
+     "set": {
+      "pedal": 1,
+      "gear": "1",
+      "handbrake": true
+     },
+     "task": "stall"
+    },
+    {
+     "ar": "شوف السلسلة ديال القوة: Moteur → Volant → Embrayage → Boîte → Pont → Roues. دابا الپيدال فالنص مع البنزين: l'embrayage كيزلق (المخطط) والديسك كيسخن (كيحمار) — هادا هو «riding the clutch» اللي خاصك تتفاداه. طلع الپيدال لـ 0% باش يتزير.",
+     "set": {
+      "pedal": 0.5,
+      "gear": "1",
+      "handbrake": false,
+      "throttle": 0.3
+     }
+    }
+   ],
+   "notes": {
+    "principle": "فالطوموبيل الحقيقية، القوة اللي كينقلها l'embrayage كتعتمد على قوة الريسور ومعامل الاحتكاك ومساحة الديسك. الپيدال ما كيتحركش خطي: point de patinage كيختلف من طوموبيل لأخرى ومع التآكل.",
+    "simulation": "فالسيمولاتور: capacity = engagement(pedal) × 260 N·m، و engagement كيتبدل بين 62% و 25% ديال الپيدال (منحنى أُسّي). نفس الأرقام كيستعملهم مختبر l'embrayage والسياقة.",
+    "approximation": "الأشكال مبسطة (ما كاينش ressorts amortisseurs، cannelures مفصلة، ولا مسامير). السرعات والقوى حقيقية حسب الموديل ديال السيمولاتور."
+   }
+  },
+  {
+   "id": "gearbox",
+   "icon": "⚙️",
+   "order": 2,
+   "quizTopic": "lab-gearbox",
+   "title": "البواط اليدوية",
+   "fr": "Boîte de vitesses manuelle",
+   "summary": "كيفاش كيتبدل rapport، علاش الأولى قوية والخامسة سريعة، وعلاش كيحك البواط بلا embrayage.",
+   "components": {
+    "input": {
+     "ar": "Arbre primaire",
+     "fr": "Arbre primaire (entrée)",
+     "desc": "جاي من l'embrayage، وعليه پينيونات ثابتين كيدورو ديما معاه."
+    },
+    "output": {
+     "ar": "Arbre secondaire",
+     "fr": "Arbre secondaire (sortie)",
+     "desc": "موازي لـ arbre primaire. عليه پينيونات «فولي» (fous): غير الفيتيس اللي مقفولة بالـ baladeur كتعطي الحركة. فطوموبيلات traction كيعطي مباشرة للپون (différentiel)."
+    },
+    "gears": {
+     "ar": "Pignons",
+     "fr": "Pignons",
+     "desc": "كل زوج ديال الپينيونات = rapport. عدد السنان كيحدد النسبة."
+    },
+    "sleeve": {
+     "ar": "Baladeur / synchro",
+     "fr": "Baladeur et synchroniseur",
+     "desc": "حلقة كتزلق وكتقفل الپينيون مع المحور. synchro كيساوي السرعات قبل."
+    },
+    "idler": {
+     "ar": "Pignon de marche arrière",
+     "fr": "Pignon de renvoi",
+     "desc": "پينيون زايد كيقلب اتجاه الدوران."
+    },
+    "lever": {
+     "ar": "Levier (H)",
+     "fr": "Levier de vitesses",
+     "desc": "كيحرك fourchettes اللي كيحركو الـ baladeurs."
+    }
+   },
+   "steps": [
+    {
+     "ar": "Point mort (N): الپينيونات كيدورو ولكن حتى واحد ما مقفول على arbre secondaire → الروايض ما كيتحركوش.",
+     "set": {
+      "gear": "N",
+      "pedal": 0,
+      "throttle": 0.1
+     }
+    },
+    {
+     "ar": "دوس l'embrayage ودخل 1: الـ baladeur كيتزحلق ويقفل الپينيون الكبير. rapport 3.73 → قوة كبيرة، سرعة صغيرة.",
+     "set": {
+      "pedal": 1,
+      "gear": "1"
+     }
+    },
+    {
+     "ar": "طلع l'embrayage وزيد البنزين: قارن سرعة arbre primaire و arbre secondaire. القسمة ديالهم = rapport.",
+     "set": {
+      "pedal": 0,
+      "gear": "1",
+      "throttle": 0.3,
+      "handbrake": false
+     }
+    },
+    {
+     "ar": "جرب 2 و3 و4 و5: نفس RPM، سرعة أكبر، وقوة أقل فالروايض.",
+     "set": {
+      "gear": "3",
+      "pedal": 0,
+      "throttle": 0.35
+     }
+    },
+    {
+     "ar": "Marche arrière: pignon de renvoi كيقلب الاتجاه. خاص الطوموبيل تكون واقفة.",
+     "set": {
+      "speed": 0,
+      "gear": "R",
+      "pedal": 1,
+      "throttle": 0,
+      "handbrake": true
+     }
+    },
+    {
+     "ar": "جرب تبدل الفيتيس و l'embrayage طالع: البواط كيحك (craquement) والفيتيس ما كتدخلش — نفس القاعدة اللي فالسياقة.",
+     "set": {
+      "pedal": 0,
+      "gear": "N"
+     },
+     "task": "grind"
+    }
+   ],
+   "notes": {
+    "principle": "هادي بواط بزوج محاور (بحال بزاف ديال طوموبيلات traction): arbre primaire و arbre secondaire. بعض البواطات فيها arbre intermédiaire ثالث. فالحقيقة كاينين synchros، roulements، والزيت.",
+    "simulation": "النسب: R −3.55، 1: 3.73، 2: 2.05، 3: 1.39، 4: 1.03، 5: 0.82، pont 4.06، rendement 92% — نفس الأرقام ديال الطوموبيل اللي كتسوق.",
+    "approximation": "الرسم بزوج محاور ومبسط (ما كيبينش roulements ولا synchros مفصلين). عدد السنان مختار باش يقرب للنسب."
+   }
+  },
+  {
+   "id": "engine",
+   "icon": "🔥",
+   "order": 3,
+   "quizTopic": "lab-engine",
+   "title": "الموطور و RPM",
+   "fr": "Moteur et régime",
+   "summary": "الرالونتي، البنزين، courbe de couple، frein moteur، والـ calage.",
+   "components": {
+    "crank": {
+     "ar": "Vilebrequin",
+     "fr": "Vilebrequin",
+     "desc": "كيحول حركة البيستونات لدوران."
+    },
+    "piston": {
+     "ar": "Pistons",
+     "fr": "Pistons",
+     "desc": "4 ديال البيستونات: الانفجار كيدفعهم للتحت."
+    },
+    "rod": {
+     "ar": "Bielles",
+     "fr": "Bielles",
+     "desc": "كيربطو البيستونات بالـ vilebrequin."
+    },
+    "flywheel": {
+     "ar": "Volant moteur",
+     "fr": "Volant moteur",
+     "desc": "كيخزن الطاقة وكيخلي الدوران مستقر."
+    }
+   },
+   "steps": [
+    {
+     "ar": "Ralenti: بلا ما تقيس البنزين، الحاسوب كيعطي شوية باش يبقا ~850 tr/min.",
+     "set": {
+      "throttle": 0,
+      "gear": "N"
+     }
+    },
+    {
+     "ar": "زيد البنزين فـ N: RPM كيطلع بسرعة حيت ما كاين حتى حمل. فـ 6500 كيقطع limiteur.",
+     "set": {
+      "throttle": 0.6,
+      "gear": "N"
+     }
+    },
+    {
+     "ar": "Courbe de couple: الموطور كيعطي أكبر couple حوالي 3500–4000 tr/min. تحت 1000 ضعيف بزاف.",
+     "set": {
+      "throttle": 0.3
+     }
+    },
+    {
+     "ar": "Frein moteur: الفيتيس داخلة، بلا بنزين → الاحتكاك والضغط فالموطور كينقصو السرعة.",
+     "set": {
+      "throttle": 0,
+      "gear": "3",
+      "pedal": 0,
+      "speed": 60
+     },
+     "task": "engineBrake"
+    },
+    {
+     "ar": "Calage: إلا تجبد الموطور تحت ~430 tr/min كيطفى.",
+     "set": {
+      "gear": "1",
+      "pedal": 1,
+      "handbrake": true,
+      "throttle": 0
+     },
+     "task": "stall"
+    }
+   ],
+   "notes": {
+    "principle": "couple × régime = puissance. الموطور ليصانص 4 سيلاندر 4 temps: انفجار فكل نص دورة.",
+    "simulation": "courbe max 140 N·m فـ 3500–4000 tr/min، ralenti 850، calage تحت 430، limiteur 6500 — نفس الموطور ديال السياقة.",
+    "approximation": "البيستونات والصوت تعليميين. الأرقام قريبة لموطور 1.4–1.6 L، ماشي ماركة محددة."
+   }
+  },
+  {
+   "id": "drivetrain",
+   "icon": "🔗",
+   "order": 4,
+   "quizTopic": "lab-drivetrain",
+   "title": "نقل الحركة (traction avant)",
+   "fr": "Transmission (traction)",
+   "summary": "تبع القوة من الموطور حتى الروايض، وشوف علاش كاين différentiel.",
+   "components": {
+    "engine": {
+     "ar": "Moteur",
+     "fr": "Moteur (transversal)",
+     "desc": "مركب بالعرض فالقدام."
+    },
+    "clutch": {
+     "ar": "Embrayage",
+     "fr": "Embrayage",
+     "desc": "بين الموطور والبواط."
+    },
+    "gearbox": {
+     "ar": "Boîte",
+     "fr": "Boîte de vitesses",
+     "desc": "كتختار rapport."
+    },
+    "diff": {
+     "ar": "Différentiel",
+     "fr": "Pont / différentiel",
+     "desc": "كيقسم القوة بين الروضتين وكيخليهم يدورو بسرعات مختلفين فالدورة."
+    },
+    "shafts": {
+     "ar": "Cardans",
+     "fr": "Transmissions (cardans)",
+     "desc": "كيوصلو القوة للروايض اللي قدام حتى ملي كيدورو."
+    },
+    "wheels": {
+     "ar": "Roues avant",
+     "fr": "Roues motrices",
+     "desc": "فـ traction، الروايض اللي قدام كيجبدو وكيوجهو."
+    }
+   },
+   "steps": [
+    {
+     "ar": "هادي طوموبيل traction avant: الموطور، l'embrayage، البواط والـ différentiel كلهم قدام.",
+     "set": {
+      "gear": "N"
+     }
+    },
+    {
+     "ar": "دخل 1 وزيد البنزين: البرتقالي كيوريك فين كتمشي القوة.",
+     "set": {
+      "gear": "1",
+      "pedal": 0,
+      "throttle": 0.3,
+      "handbrake": false
+     }
+    },
+    {
+     "ar": "دور الفولان: الروضة البرانية كتدور أسرع — هادي خدمة الـ différentiel.",
+     "set": {
+      "steer": 300
+     }
+    }
+   ],
+   "notes": {
+    "principle": "Couple roue = couple moteur × rapport boîte × rapport pont × rendement.",
+    "simulation": "الحسابات من VehicleController ديال السياقة (rendement 92%).",
+    "approximation": "Différentiel مرسوم مبسط (ما كيبينش satellites مفصلين)."
+   }
+  },
+  {
+   "id": "brakes",
+   "icon": "🛑",
+   "order": 5,
+   "quizTopic": "lab-brakes",
+   "title": "الفرانات",
+   "fr": "Freinage",
+   "summary": "Hydraulique، étrier، plaquettes، disque، ومسافة التوقف.",
+   "components": {
+    "pedal": {
+     "ar": "Pédale de frein",
+     "fr": "Pédale",
+     "desc": "كتدفع maître-cylindre."
+    },
+    "master": {
+     "ar": "Maître-cylindre",
+     "fr": "Maître-cylindre",
+     "desc": "كيحول الدفع لضغط فـ liquide de frein."
+    },
+    "lines": {
+     "ar": "Conduites",
+     "fr": "Canalisations",
+     "desc": "الضغط كيوصل لكل روضة."
+    },
+    "caliper": {
+     "ar": "Étrier",
+     "fr": "Étrier",
+     "desc": "البيستون ديالو كيزير plaquettes على disque."
+    },
+    "pads": {
+     "ar": "Plaquettes",
+     "fr": "Plaquettes",
+     "desc": "مادة الاحتكاك اللي كتتاكل مع الوقت."
+    },
+    "disc": {
+     "ar": "Disque",
+     "fr": "Disque",
+     "desc": "كيدور مع الروضة وكيسخن ملي تفراني."
+    }
+   },
+   "steps": [
+    {
+     "ar": "دوس الپيدال بشوية: الضغط كيطلع والـ plaquettes كيقربو للديسك.",
+     "set": {
+      "brake": 0.3,
+      "speed": 50
+     }
+    },
+    {
+     "ar": "فران قوي: الديسك كيسخن (الطاقة ديال الحركة كتولي سخانة).",
+     "set": {
+      "brake": 1,
+      "speed": 50
+     }
+    },
+    {
+     "ar": "حسب مسافة التوقف: بدل السرعة ونوع الطريق وشوف الفرق.",
+     "set": {
+      "speed": 90
+     },
+     "task": "distance"
+    }
+   ],
+   "notes": {
+    "principle": "مسافة الفران ≈ v² / (2·μ·g). مسافة رد الفعل ≈ v × وقت رد الفعل.",
+    "simulation": "السيمولاتور كيستعمل قوة فران قصوى ≈ 0.95 g على طريق ناشفة.",
+    "approximation": "الأرقام توضيحية: الواقع كيتبدل بالروايض، الحمل، الطريق، والحالة ديال السائق. ماشي ضمان."
+   }
+  },
+  {
+   "id": "steering",
+   "icon": "🛞",
+   "order": 6,
+   "quizTopic": "lab-steering",
+   "title": "الستيرينغ والسوسپانسيون",
+   "fr": "Direction et suspension",
+   "summary": "Crémaillère، زاوية الروايض، وكيفاش كتميل الكاروسري فالدورة والفران.",
+   "components": {
+    "wheel": {
+     "ar": "Volant",
+     "fr": "Volant",
+     "desc": "15.5° فالفولان = 1° فالروضة (فهاد الطوموبيل)."
+    },
+    "column": {
+     "ar": "Colonne",
+     "fr": "Colonne de direction",
+     "desc": "كتوصل الفولان للـ pignon."
+    },
+    "rack": {
+     "ar": "Crémaillère",
+     "fr": "Crémaillère",
+     "desc": "كتحول الدوران لحركة مستقيمة."
+    },
+    "rods": {
+     "ar": "Biellettes",
+     "fr": "Biellettes",
+     "desc": "كيدفعو porte-moyeux باش تدور الروايض."
+    },
+    "springs": {
+     "ar": "Ressorts / amortisseurs",
+     "fr": "Ressorts et amortisseurs",
+     "desc": "كيمتصو الحفر وكيخليو الروايض لاصقين فالطريق."
+    }
+   },
+   "steps": [
+    {
+     "ar": "دور الفولان: شوف الـ crémaillère كتزحلق والروايض كيدورو (max 34°).",
+     "set": {
+      "steer": 270
+     }
+    },
+    {
+     "ar": "فالدورة بسرعة: الكاروسري كتميل للبرا (roulis).",
+     "set": {
+      "lat": 0.6
+     }
+    },
+    {
+     "ar": "فالفران القوي: المقدمة كتهبط (tangage). لهادشي ما تفرانيش بقوة وسط الدورة.",
+     "set": {
+      "brakeG": 0.8
+     }
+    }
+   ],
+   "notes": {
+    "principle": "Sous-virage = الطوموبيل كتدور أقل من المطلوب؛ Survirage = اللور كيزلق. الحل الأول ديما: نقص السرعة قبل الدورة.",
+    "simulation": "الموديل ديال السياقة كيحد التسارع الجانبي فـ 0.85 g (ما كاينش انزلاق مفصل).",
+    "approximation": "Géométrie مبسطة (ما كاينش Ackermann دقيق ولا carrossage)."
+   }
+  },
+  {
+   "id": "dashboard",
+   "icon": "🔴",
+   "order": 7,
+   "quizTopic": "lab-dashboard",
+   "title": "Tableau de bord والأضواء",
+   "fr": "Tableau de bord et témoins",
+   "summary": "شنو كيعني كل ضو، وإمتى خاصك توقف.",
+   "components": {},
+   "steps": [
+    {
+     "ar": "الألوان: أحمر = خطر (وقف بأمان)، برتقالي = فحص قريب، أخضر/أزرق = معلومة.",
+     "set": {}
+    },
+    {
+     "ar": "قيس على كل ضو باش تعرف المعنى ديالو وشنو خاصك دير.",
+     "set": {}
+    },
+    {
+     "ar": "مع الكونطاكت (قبل ما يشعل الموطور) كيشعلو بزاف ديال الأضواء: تجربة. خاصهم يطفاو من بعد التشغيل.",
+     "set": {
+      "ignitionTest": true
+     }
+    }
+   ],
+   "notes": {
+    "principle": "الرموز كتختلف شوية من ماركة لأخرى: شوف ديما le carnet d'entretien ديال الطوموبيل ديالك.",
+    "simulation": "نفس الرموز ديال الكونطور فالسياقة.",
+    "approximation": "رسوم مبسطة للرموز."
+   }
+  },
+  {
+   "id": "maintenance",
+   "icon": "🧰",
+   "order": 8,
+   "quizTopic": "lab-maintenance",
+   "title": "السلامة والصيانة",
+   "fr": "Sécurité et entretien",
+   "summary": "الفحص قبل السياقة: شنو تقدر تشوف بوحدك، وشنو خاصو ميكانيسيان.",
+   "components": {
+    "tyres": {
+     "ar": "الروايض",
+     "fr": "Pneus",
+     "desc": "الضغط (بارد)، النقش (sculpture)، الشقوق. ✅ تقدر تشوفهم بوحدك.",
+     "learner": true
+    },
+    "lights": {
+     "ar": "الضواو",
+     "fr": "Feux",
+     "desc": "شوف الضواو كاملين (ستوپ، clignotants). ✅ بوحدك (مع شي واحد يعاونك).",
+     "learner": true
+    },
+    "oil": {
+     "ar": "زيت الموطور",
+     "fr": "Huile moteur",
+     "desc": "la jauge، الموطور بارد والطوموبيل مستوية. ✅ بوحدك. التبديل: ميكانيسيان.",
+     "learner": true
+    },
+    "coolant": {
+     "ar": "Liquide de refroidissement",
+     "fr": "Liquide de refroidissement",
+     "desc": "شوف المستوى فالبوكال والموطور بارد. ⚠️ ما تحلش والموطور سخون.",
+     "learner": true
+    },
+    "brakeFluid": {
+     "ar": "Liquide de frein",
+     "fr": "Liquide de frein",
+     "desc": "شوف المستوى برك. أي نقص = ميكانيسيان (ممكن تآكل ولا fuite).",
+     "learner": true
+    },
+    "washer": {
+     "ar": "Lave-glace",
+     "fr": "Lave-glace",
+     "desc": "عمرو بالما المخصص. ✅ بوحدك.",
+     "learner": true
+    },
+    "battery": {
+     "ar": "الباطري",
+     "fr": "Batterie",
+     "desc": "شوف واش البورنات نقيين. ⚠️ الخدمة فالكهرباء: ميكانيسيان.",
+     "learner": false
+    },
+    "wipers": {
+     "ar": "Essuie-glaces",
+     "fr": "Essuie-glaces",
+     "desc": "الشفرات ما خاصهمش يخليو الخطوط. ✅ التبديل سهل.",
+     "learner": true
+    },
+    "brakes": {
+     "ar": "Plaquettes / disques",
+     "fr": "Freins",
+     "desc": "صوت ولا اهتزاز = ميكانيسيان. ❌ ما تبدلهمش بوحدك.",
+     "learner": false
+    },
+    "belt": {
+     "ar": "Courroie",
+     "fr": "Courroie",
+     "desc": "❌ ما تقيسهاش والموطور خدام. الفحص والتبديل: ميكانيسيان.",
+     "learner": false
+    }
+   },
+   "steps": [
+    {
+     "ar": "دور حول الطوموبيل وقيس على كل نقطة: الأخضر = تقدر تفحص بوحدك بأمان، الأحمر = خليها لميكانيسيان.",
+     "set": {}
+    },
+    {
+     "ar": "حل الكابو (الموطور مطفي وبارد) وشوف السوائل.",
+     "set": {
+      "hood": true
+     }
+    },
+    {
+     "ar": "عطب فالطريق: warning، تجنب لبلاصة آمنة، gilet، وعيط للمساعدة. فالأوطوروت: خرج من الجهة البعيدة على السير ووقف ورا الگليسيير.",
+     "set": {}
+    }
+   ],
+   "notes": {
+    "principle": "الصيانة المنتظمة (carnet d'entretien) كتنقص الأعطاب الخطيرة.",
+    "simulation": "هاد الوحدة تعليمية: ما كتأثرش على السياقة فالسيمولاتور.",
+    "approximation": "أماكن القطع كتختلف من طوموبيل لأخرى."
+   }
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+  "_doc": "Practical exams run in the 3D simulator in examiner mode (no coaching; a critical mistake fails). Scoring = 100 − sum of mistake points (see mistakes.json). Thresholds are simulator choices, not the official Moroccan exam.",
+  "categories": {
+    "preparation": "تحضير الطوموبيل",
+    "transmission": "l'embrayage والفيتيسات",
+    "steering": "الستيرينغ والكولوار",
+    "observation": "المراقبة و clignotants",
+    "speed": "التحكم فالسرعة",
+    "priority": "الأولوية والإشارات",
+    "hazards": "توقع الخطر والراجلين",
+    "manoeuvres": "الپاركينغ والمناورات",
+    "collision": "تفادي الاصطدام",
+    "motorway": "الأوطوروت"
+  },
+  "skillToCategory": { "transmission": "transmission", "steering": "steering", "observation": "observation", "speed": "speed", "signs": "priority", "priority": "priority", "hazards": "hazards", "manoeuvres": "manoeuvres", "motorway": "motorway" },
+  "exams": [
+    { "id": "p1", "n": 1, "scenario": "exam-prep", "difficulty": 1, "passScore": 80, "prerequisites": ["d03"],
+      "title": "تحضير الطوموبيل", "fr": "Préparation du véhicule",
+      "assessed": ["تنظيم وفحص المرايات", "angle mort", "frein à main + point mort", "l'embrayage قبل التشغيل", "تشغيل الموطور"] },
+    { "id": "p2", "n": 2, "scenario": "exam-startstop", "difficulty": 1, "passScore": 75, "prerequisites": ["d07"],
+      "title": "التحرك والتوقف", "fr": "Démarrer et s'arrêter",
+      "assessed": ["المراقبة قبل التحرك", "التحكم فـ l'embrayage (بلا calage)", "التوقف فالمكان المحدد", "تأمين الطوموبيل"] },
+    { "id": "p3", "n": 3, "scenario": "exam-urban", "difficulty": 2, "passScore": 70, "prerequisites": ["d14", "d15", "d18"],
+      "title": "السياقة فالمدينة", "fr": "Conduite urbaine",
+      "assessed": ["البقاء فالكولوار", "السرعة (منطقة 30)", "الضو", "الرون-پوان", "الراجلين"] },
+    { "id": "p4", "n": 4, "scenario": "exam-junctions", "difficulty": 3, "passScore": 70, "prerequisites": ["d12", "d17", "d22"],
+      "title": "الملتقيات والمناورات", "fr": "Intersections et manœuvres",
+      "assessed": ["STOP والأولوية", "clignotants و angle mort", "الفيتيسات فالدورات", "الپاركينغ", "تفادي الاصطدام"] },
+    { "id": "p5", "n": 5, "scenario": "exam-motorway", "difficulty": 3, "passScore": 70, "prerequisites": ["d27", "d28"],
+      "title": "الأوطوروت", "fr": "Autoroute",
+      "assessed": ["الدخول من voie d'accélération", "سرعة الاندماج", "البقاء فاليمين", "مسافة الأمان", "60–120 km/h"] },
+    { "id": "p6", "n": 6, "scenario": "exam-final", "difficulty": 4, "passScore": 75, "prerequisites": ["d26", "d29"],
+      "title": "الامتحان النهائي", "fr": "Examen final intégré",
+      "assessed": ["التحضير والتشغيل", "l'embrayage والفيتيسات", "الملاحظة والتوقع", "السرعة", "الأولوية والإشارات", "الپاركينغ"] }
+  ],
+  "theory": {
+    "_doc": "Practice exam format chosen for this app. The official NARSA question count and pass mark were not published on the pages consulted (2026-10-15), so this is NOT presented as the official format.",
+    "mock": { "questions": 40, "secondsPerQuestion": 30, "passPercent": 80, "topics": ["signs", "markings", "priority", "roundabouts", "lights", "speed", "distance", "overtaking", "indicators", "pedestrians", "parking", "motorway", "hazards", "safety", "transmission"] },
+    "quick": { "questions": 10 }
+  }
+}
